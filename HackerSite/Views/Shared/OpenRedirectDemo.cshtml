@@ -1,0 +1,160 @@
+﻿@{
+    Layout = "";
+}
+@model LoginModel
+
+<!DOCTYPE html>
+<!-- saved from url=(0077)https://localhost:44315/Identity/Account/Login?ReturnUrl=%2FBasket%2FCheckout -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in - Microsoft.eShopOnWeb</title>
+
+    <link rel="stylesheet" href="./OpenRedirectDemo_files/bootstrap.css">
+    <link rel="stylesheet" href="./OpenRedirectDemo_files/app.css">
+    <link rel="stylesheet" href="./OpenRedirectDemo_files/app.component.css">
+    <link rel="stylesheet" href="./OpenRedirectDemo_files/header.css">
+    <link rel="stylesheet" href="./OpenRedirectDemo_files/identity.css">
+    <link rel="stylesheet" href="./OpenRedirectDemo_files/pager.css">
+    <link rel="stylesheet" href="./OpenRedirectDemo_files/basket.component.css">
+    <link rel="stylesheet" href="./OpenRedirectDemo_files/basket-status.component.css">
+    <link rel="stylesheet" href="./OpenRedirectDemo_files/catalog.component.css">
+    <link rel="stylesheet" href="./OpenRedirectDemo_files/orders.component.css">
+
+
+</head>
+<body>
+    <div class="esh-app-wrapper">
+        <header class="esh-app-header">
+            <div class="container">
+                <article class="row">
+                    <section class="col-lg-7 col-md-6 col-xs-12">
+                        <a href="https://localhost:44315/">
+                            <img src="./OpenRedirectDemo_files/brand.png" alt="eShop On Web">
+                        </a>
+                    </section>
+                    <section class="col-lg-4 col-md-5 col-xs-12">
+                        <div class="esh-identity">
+                            <section class="esh-identity-section">
+                                <div class="esh-identity-item">
+
+                                    <a class="esh-identity-name esh-identity-name--upper" href="https://localhost:44315/Identity/Account/Login">
+                                        Login
+                                    </a>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                    <section class="col-lg-1 col-xs-12">
+
+
+                        <a class="esh-basketstatus" href="https://localhost:44315/Basket">
+                            <div class="esh-basketstatus-image">
+                                <img src="./OpenRedirectDemo_files/cart.png">
+                            </div>
+                            <div class="esh-basketstatus-badge">
+                                2
+                            </div>
+                        </a>
+
+                    </section>
+
+                </article>
+            </div>
+        </header>
+
+
+
+        <div class="container account-login-container">
+            <h2>Log in</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <section>
+                        <form method="post" novalidate="novalidate" kpxcform-initialized="true" kpxcusername="Input_Email" kpxcpassword="Input_Password">
+                            <hr />
+                            Login or password is incorrect
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="@Model.Email"></label>
+                                <input asp-for="@Model.Email" class="form-control" />
+                                <span asp-validation-for="@Model.Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="@Model.Password"></label>
+                                <input asp-for="@Model.Password" class="form-control" />
+                                <span asp-validation-for="@Model.Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <div class="checkbox">
+                                    <label asp-for="@Model.RememberMe">
+                                        <input asp-for="@Model.RememberMe" />
+                                        @Html.DisplayNameFor(m => m.RememberMe)
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="hidden" asp-for="@Model.ReturnUrl" />
+                                <button type="submit" class="btn btn-default">Log in</button>
+                            </div>
+                            <div class="form-group">
+                                <p>
+                                    <a href="https://localhost:44315/Identity/Account/ForgotPassword">Forgot your password?</a>
+                                </p>
+                                <p>
+                                    <a href="https://localhost:44315/Identity/Account/Register">Register as a new user</a>
+                                </p>
+                            </div>
+                            <p>
+                                Note that for demo purposes you don't need to register and can login with these credentials:
+                            </p>
+                            <p>
+                                User:     <b>demouser@microsoft.com</b>
+                            </p>
+                            <p>
+                                Password: <b>Pass@word1</b>
+                            </p>
+                            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8NcPsixJnTlOkO4Z3wFoBhYCmz9SNqLXLkd4ibaCW--mJRahdA6QxkjIOmLiq9bb7IxHcaNP1mouKfgObZbkwjR0zjJtkcnS4L8FHMx_9KxGSzxPRfDzcBgIWaGNaYn9GXVmqGglRmgTw6QOulPrJRY"><input name="Input.RememberMe" type="hidden" value="false">
+                        </form>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="esh-app-footer footer">
+            <div class="container">
+                <article class="row">
+                    <section class="col-sm-6"></section>
+                    <section class="col-sm-6">
+                        <div class="esh-app-footer-text hidden-xs"> e-ShopOnWeb. All rights reserved </div>
+                    </section>
+                </article>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./OpenRedirectDemo_files/jquery.js.Без названия"></script>
+    <script src="./OpenRedirectDemo_files/bootstrap.js.Без названия"></script>
+    <script src="./OpenRedirectDemo_files/site.js.Без названия"></script>
+
+
+
+
+    <script src="./OpenRedirectDemo_files/jquery.validate.js.Без названия"></script>
+    <script src="./OpenRedirectDemo_files/jquery.validate.unobtrusive.js.Без названия"></script>
+
+
+
+
+
+    <!-- Visual Studio Browser Link -->
+    <script type="text/javascript" src="./OpenRedirectDemo_files/browserLink" async="async" id="__browserLink_initializationData" data-requestid="afe0e22b98844595a2360e5403c6e241" data-requestmappingfromserver="False"></script>
+    <!-- End Browser Link -->
+
+
+
+    <div class="kpxc kpxc-pwgen-icon key" title="Создать пароль" alt="Значок генератора паролей" size="24" offset="3" kpxc-pwgen-field-id="Input_Password" style="z-index: 9999; width: 24px; height: 24px; top: 321px; left: 1169px; display: block;"></div>
+</body>
+</html>
